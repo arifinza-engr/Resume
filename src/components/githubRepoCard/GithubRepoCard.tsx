@@ -1,4 +1,3 @@
-import React from "react";
 import "./GithubRepoCard.scss";
 import {Fade} from "react-awesome-reveal";
 import {formatFileSizeDisplay} from "../../utils";

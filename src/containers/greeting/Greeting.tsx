@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import {useContext} from "react";
 import {Fade} from "react-awesome-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";

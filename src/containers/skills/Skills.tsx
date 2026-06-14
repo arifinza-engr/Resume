@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import {useContext} from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";

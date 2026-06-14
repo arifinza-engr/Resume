@@ -1,4 +1,3 @@
-import React from "react";
 import "./SocialMedia.scss";
 import {socialMediaLinks as _socialMediaLinks} from "../../portfolio";
 

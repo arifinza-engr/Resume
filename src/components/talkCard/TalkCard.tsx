@@ -1,4 +1,3 @@
-import React from "react";
 import "./TalkCard.scss";
 
 interface TalkDetails {

@@ -14,7 +14,8 @@ A software developer portfolio, modernized to a current stack.
 ## Scripts
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start the dev server at http://localhost:3000 |
+| `npm start` | Fetch live GitHub/Medium data (needs .env) then start the dev server |
+| `npm run dev` | Start the dev server at http://localhost:3000 (no data fetch) |
 | `npm run build` | Fetch optional data + production build into `build/` |
 | `npm run preview` | Preview the production build locally |
 | `npm test` | Run unit tests (Vitest) |

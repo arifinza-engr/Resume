@@ -1,4 +1,3 @@
-import React from "react";
 import "./Top.scss";
 
 export default function Top() {

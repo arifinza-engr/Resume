@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import {useContext} from "react";
 import "./Achievement.scss";
 import AchievementCard from "../../components/achievementCard/AchievementCard";
 import {achievementSection} from "../../portfolio";

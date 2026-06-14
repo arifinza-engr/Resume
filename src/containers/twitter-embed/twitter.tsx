@@ -1,4 +1,7 @@
-import React, {Suspense, useContext} from "react";
+// NOTE: react-twitter-embed is unmaintained and declares peer deps on React <=16.
+// It is forced onto React 19 via package.json "overrides" and renders fine, but
+// consider replacing with react-tweet or an official embed if issues arise.
+import {Suspense, useContext} from "react";
 import "./twitter.scss";
 import Loading from "../loading/Loading";
 import {TwitterTimelineEmbed} from "react-twitter-embed";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Progress.scss";
 import {illustration, techStack} from "../../portfolio";
 import {Fade} from "react-awesome-reveal";

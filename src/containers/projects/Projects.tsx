@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext, Suspense, lazy} from "react";
+import {useState, useEffect, useContext, Suspense, lazy} from "react";
 import "./Project.scss";
 import Button from "../../components/button/Button";
 import {openSource, socialMediaLinks} from "../../portfolio";

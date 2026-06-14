@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from "react";
+import {useState, useEffect, useContext} from "react";
 import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
 import {blogSection} from "../../portfolio";
