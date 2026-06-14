@@ -18,7 +18,7 @@ export default function BlogCard({blog, isDark}: BlogCardProps) {
       console.log(`URL for ${name} not found`);
       return;
     }
-    var win = window.open(url, "_blank");
+    const win = window.open(url, "_blank");
     win?.focus();
   }
 

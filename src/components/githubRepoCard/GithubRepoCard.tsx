@@ -25,7 +25,7 @@ export default function GithubRepoCard({repo, isDark}: GithubRepoCardProps) {
       console.log(`URL in ${name} is undefined`);
       return;
     }
-    var win = window.open(url, "_blank");
+    const win = window.open(url, "_blank");
     win?.focus();
   }
 

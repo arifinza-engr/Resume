@@ -14,13 +14,16 @@ interface AchievementCardProps {
   isDark: boolean;
 }
 
-export default function AchievementCard({cardInfo, isDark}: AchievementCardProps) {
+export default function AchievementCard({
+  cardInfo,
+  isDark
+}: AchievementCardProps) {
   function openUrlInNewTab(url: string | undefined, name: string) {
     if (!url) {
       console.log(`URL for ${name} not found`);
       return;
     }
-    var win = window.open(url, "_blank");
+    const win = window.open(url, "_blank");
     win?.focus();
   }
 

@@ -4,6 +4,14 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation.json"; // Rename to your file name for custom animation
+import udinusLogo from "./assets/images/udinusLogo.png";
+import bpppLogo from "./assets/images/bpppLogo.png";
+import pemalangLogo from "./assets/images/pemalangLogo.png";
+import smpLogo from "./assets/images/smpLogo.png";
+import saayaHealthLogo from "./assets/images/saayaHealthLogo.webp";
+import nextuLogo from "./assets/images/nextuLogo.webp";
+import mtcnaLogo from "./assets/images/MTCNA.png";
+import linuxLogo from "./assets/images/linux.png";
 
 // Splash Screen
 
@@ -118,7 +126,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Universitas Dian Nuswantoro",
-      logo: require("./assets/images/udinusLogo.png"), // Tambahkan logo jika ada
+      logo: udinusLogo,
       subHeader: "Bachelor of Informatics Engineering",
       duration: "Sep 2018 - Feb 2024",
       desc: "Final project focused on public service optimization via real-time WhatsApp bot notification system for street light complaints.",
@@ -167,7 +175,7 @@ const workExperiences = {
     {
       role: "IT Support",
       company: "BPPP Tegal (Resvara)",
-      companylogo: require("./assets/images/bpppLogo.png"), // Tambahkan logo jika ada
+      companylogo: bpppLogo,
       date: "Jul 2024 – Jul 2025",
       desc: "Maintained VPS servers, developed automation tools using Excel, and supported digital services for public outreach.",
       descBullets: [
@@ -181,7 +189,7 @@ const workExperiences = {
     {
       role: "Web Developer / IT Support Intern",
       company: "DISPERKIM Kab. Pemalang",
-      companylogo: require("./assets/images/pemalangLogo.png"), // Ganti jika ada logo DISPERKIM
+      companylogo: pemalangLogo,
       date: "Aug 2023 – Oct 2023",
       desc: "Developed complaint app with GIS and real-time WhatsApp notification, improving public service response time by 50%",
       descBullets: [
@@ -194,7 +202,7 @@ const workExperiences = {
     {
       role: "Freelance Web Developer",
       company: "SMP Negeri 1 Pemalang",
-      companylogo: require("./assets/images/smpLogo.png"), // Ganti jika ada logo SMPN 1
+      companylogo: smpLogo,
       date: "Feb 2022 – Apr 2022",
       desc: "Created responsive school website with full student/teacher database, downloadable modules, announcements, and events.",
       descBullets: [
@@ -222,7 +230,7 @@ const bigProjects = {
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: saayaHealthLogo,
       projectName: "Saayahealth",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
@@ -234,7 +242,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: nextuLogo,
       projectName: "Nextu",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
@@ -260,7 +268,7 @@ const achievementSection = {
       title: "MikroTik Certified Network Associate (MTCNA)",
       subtitle:
         "Official certification from MikroTik, obtained through ID-Networkers. Valid until June 2027.",
-      image: require("./assets/images/MTCNA.png"), // Ganti dengan logo sertifikat jika ada
+      image: mtcnaLogo,
       imageAlt: "MTCNA Logo",
       footerLink: [
         {
@@ -273,7 +281,7 @@ const achievementSection = {
       title: "Linux Fundamentals",
       subtitle:
         "Basic Linux system administration training covering file system management, user permissions, and package management.",
-      image: require("./assets/images/linux.png"), // Ganti dengan logo sertifikat jika ada
+      image: linuxLogo,
       imageAlt: "Linux Logo",
       footerLink: [
         {
