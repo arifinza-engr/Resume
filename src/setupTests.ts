@@ -16,15 +16,20 @@ Object.defineProperty(window, "matchMedia", {
   }))
 });
 
-// IntersectionObserver — required by react-awesome-reveal; jsdom has none
+// IntersectionObserver — required by react-awesome-reveal; jsdom has none.
+// Stores the callback so future tests can simulate visibility changes.
 class IntersectionObserverMock {
+  callback: IntersectionObserverCallback;
   root = null;
   rootMargin = "";
-  thresholds = [];
+  thresholds: ReadonlyArray<number> = [];
+  constructor(callback: IntersectionObserverCallback) {
+    this.callback = callback;
+  }
   observe = vi.fn();
   unobserve = vi.fn();
   disconnect = vi.fn();
-  takeRecords = vi.fn(() => []);
+  takeRecords = vi.fn((): IntersectionObserverEntry[] => []);
 }
 vi.stubGlobal("IntersectionObserver", IntersectionObserverMock);
 
