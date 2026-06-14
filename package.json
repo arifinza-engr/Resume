@@ -5,18 +5,13 @@
   "private": true,
   "dependencies": {
     "colorthief": "^2.3.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "gh-pages": "^2.1.1",
-    "jest-canvas-mock": "^2.3.1",
     "lottie-react": "^2.4.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "react-easy-emoji": "^1.8.1",
     "react-headroom": "^3.0.0",
     "react-reveal": "^1.2.2",
-    "react-scripts": "^5.0.1",
-    "react-test-renderer": "^16.10.2",
     "react-twitter-embed": "3.0.3",
     "sass": "^1.32.8"
   },
@@ -51,9 +46,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "baseline-browser-mapping": "^2.9.19",
+    "@vitejs/plugin-react": "^4.7.0",
     "dotenv": "^8.2.0",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.1",
+    "vite": "^6.4.3"
   }
 }
