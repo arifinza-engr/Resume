@@ -19,8 +19,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "start": "node fetch.js && vite",
-    "build": "node fetch.js && vite build",
+    "start": "node fetch.mjs && vite",
+    "build": "node fetch.mjs && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
