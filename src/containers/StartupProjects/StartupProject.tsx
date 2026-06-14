@@ -9,8 +9,8 @@ export default function StartupProject() {
     if (!url) {
       return;
     }
-    var win = window.open(url, "_blank");
-    win.focus();
+    const win = window.open(url, "_blank");
+    if (win) win.focus();
   }
 
   const {isDark} = useContext(StyleContext);

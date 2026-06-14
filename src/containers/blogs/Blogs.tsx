@@ -6,20 +6,20 @@ import {Fade} from "react-awesome-reveal";
 import StyleContext from "../../contexts/StyleContext";
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
-  const [mediumBlogs, setMediumBlogs] = useState([]);
-  function setMediumBlogsFunction(array) {
+  const [mediumBlogs, setMediumBlogs] = useState<any[] | string>([]);
+  function setMediumBlogsFunction(array: any[] | string) {
     setMediumBlogs(array);
   }
   //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
-  function extractTextContent(html) {
+  function extractTextContent(html: string): string {
     return typeof html === "string"
       ? html
           .split(/<\/p>/i)
           .map(part => part.split(/<p[^>]*>/i).pop())
-          .filter(el => el.trim().length > 0)
+          .filter((el): el is string => typeof el === "string" && el.trim().length > 0)
           .map(el => el.replace(/<\/?[^>]+(>|$)/g, "").trim())
           .join(" ")
-      : NaN;
+      : "";
   }
   useEffect(() => {
     if (blogSection.displayMediumBlogs === "true") {
@@ -71,14 +71,13 @@ export default function Blogs() {
                       isDark={isDark}
                       blog={{
                         url: blog.url,
-                        image: blog.image,
                         title: blog.title,
                         description: blog.description
                       }}
                     />
                   );
                 })
-              : mediumBlogs.map((blog, i) => {
+              : (mediumBlogs as any[]).map((blog: any, i) => {
                   return (
                     <BlogCard
                       key={i}

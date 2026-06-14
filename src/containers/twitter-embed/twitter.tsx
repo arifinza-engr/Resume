@@ -11,8 +11,9 @@ const cantDisplayError =
 
 function timeOut() {
   setTimeout(function () {
-    if (!document.getElementById("twitter").innerHTML.includes("iframe")) {
-      document.getElementById("twitter").innerHTML = cantDisplayError;
+    const el = document.getElementById("twitter");
+    if (el && !el.innerHTML.includes("iframe")) {
+      el.innerHTML = cantDisplayError;
     }
   }, 10000);
 }
