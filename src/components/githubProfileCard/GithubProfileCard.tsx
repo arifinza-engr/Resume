@@ -5,7 +5,8 @@ import {contactInfo, isHireable} from "../../portfolio";
 import emoji from "react-easy-emoji";
 import {Fade} from "react-awesome-reveal";
 
-interface GithubProfile {
+export interface GithubProfile {
+  id?: string;
   bio?: string;
   location?: string;
   avatarUrl?: string;

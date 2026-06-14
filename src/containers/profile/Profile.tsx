@@ -2,15 +2,7 @@ import React, {useState, useEffect, lazy, Suspense} from "react";
 import {openSource} from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
-
-interface GithubProfile {
-  bio?: string;
-  location?: string;
-  avatarUrl?: string;
-  name?: string;
-  hireable?: string;
-  id?: string;
-}
+import type {GithubProfile} from "../../components/githubProfileCard/GithubProfileCard";
 
 const renderLoader = () => <Loading />;
 const GithubProfileCard = lazy(() =>

@@ -13,7 +13,7 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({blog, isDark}: BlogCardProps) {
-  function openUrlInNewTab(url, name) {
+  function openUrlInNewTab(url: string, name: string) {
     if (!url) {
       console.log(`URL for ${name} not found`);
       return;

@@ -20,9 +20,9 @@ interface EducationCardProps {
 export default function EducationCard({school}: EducationCardProps) {
   const imgRef = createRef<HTMLImageElement>();
 
-  const GetDescBullets = ({descBullets}) => {
+  const GetDescBullets = ({descBullets}: {descBullets?: string[]}) => {
     return descBullets
-      ? descBullets.map((item, i) => (
+      ? descBullets.map((item: string, i: number) => (
           <li key={i} className="subTitle">
             {item}
           </li>

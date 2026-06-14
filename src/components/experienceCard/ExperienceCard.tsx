@@ -17,7 +17,7 @@ interface ExperienceCardProps {
 }
 
 export default function ExperienceCard({cardInfo, isDark}: ExperienceCardProps) {
-  const [colorArrays, setColorArrays] = useState([]);
+  const [colorArrays, setColorArrays] = useState<number[] | null>(null);
   const imgRef = createRef<HTMLImageElement>();
 
   function getColorArrays() {
@@ -25,15 +25,19 @@ export default function ExperienceCard({cardInfo, isDark}: ExperienceCardProps) 
     setColorArrays(colorThief.getColor(imgRef.current));
   }
 
-  function rgb(values: number[] | undefined): string | undefined {
-    return typeof values === "undefined"
-      ? undefined
-      : "rgb(" + values.join(", ") + ")";
+  function rgb(values: number[] | null): string | undefined {
+    return values == null ? undefined : "rgb(" + values.join(", ") + ")";
   }
 
-  const GetDescBullets = ({descBullets, isDark}) => {
+  const GetDescBullets = ({
+    descBullets,
+    isDark,
+  }: {
+    descBullets?: string[];
+    isDark: boolean;
+  }) => {
     return descBullets
-      ? descBullets.map((item, i) => (
+      ? descBullets.map((item: string, i: number) => (
           <li
             key={i}
             className={isDark ? "subTitle dark-mode-text" : "subTitle"}

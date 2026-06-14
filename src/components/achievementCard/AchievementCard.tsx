@@ -15,7 +15,7 @@ interface AchievementCardProps {
 }
 
 export default function AchievementCard({cardInfo, isDark}: AchievementCardProps) {
-  function openUrlInNewTab(url, name) {
+  function openUrlInNewTab(url: string | undefined, name: string) {
     if (!url) {
       console.log(`URL for ${name} not found`);
       return;

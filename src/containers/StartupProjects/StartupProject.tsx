@@ -5,7 +5,7 @@ import {Fade} from "react-awesome-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
-  function openUrlInNewTab(url) {
+  function openUrlInNewTab(url: string | undefined) {
     if (!url) {
       return;
     }

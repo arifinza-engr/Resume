@@ -20,7 +20,7 @@ interface GithubRepoCardProps {
 }
 
 export default function GithubRepoCard({repo, isDark}: GithubRepoCardProps) {
-  function openUrlInNewTab(url, name) {
+  function openUrlInNewTab(url: string, name: string) {
     if (!url) {
       console.log(`URL in ${name} is undefined`);
       return;
