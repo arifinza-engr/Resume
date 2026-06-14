@@ -33,7 +33,7 @@ export default function GithubProfileCard({prof}: GithubProfileCardProps) {
               <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
             </div>
             <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
-            {prof.location !== null && (
+            {prof.location != null && (
               <div className="location-div">
                 <span className="desc-prof">
                   <svg

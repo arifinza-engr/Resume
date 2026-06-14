@@ -7,6 +7,7 @@ interface TalkDetails {
   subtitle: string;
   slides_url?: string;
   event_url?: string;
+  image?: string;
 }
 
 interface TalkCardProps {
