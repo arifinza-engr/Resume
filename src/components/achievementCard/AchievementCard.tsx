@@ -1,14 +1,27 @@
 import React from "react";
 import "./AchievementCard.scss";
 
-export default function AchievementCard({cardInfo, isDark}) {
+interface AchievementCardInfo {
+  image: string;
+  imageAlt?: string;
+  title: string;
+  description: string;
+  footer: Array<{name: string; url?: string}>;
+}
+
+interface AchievementCardProps {
+  cardInfo: AchievementCardInfo;
+  isDark: boolean;
+}
+
+export default function AchievementCard({cardInfo, isDark}: AchievementCardProps) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
       return;
     }
     var win = window.open(url, "_blank");
-    win.focus();
+    win?.focus();
   }
 
   return (

@@ -3,8 +3,22 @@ import {Fade, Slide} from "react-awesome-reveal";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
 
-export default function EducationCard({school}) {
-  const imgRef = createRef();
+interface School {
+  logo?: string;
+  name?: string;
+  schoolName: string;
+  subHeader: string;
+  duration: string;
+  desc?: string;
+  descBullets?: string[];
+}
+
+interface EducationCardProps {
+  school: School;
+}
+
+export default function EducationCard({school}: EducationCardProps) {
+  const imgRef = createRef<HTMLImageElement>();
 
   const GetDescBullets = ({descBullets}) => {
     return descBullets

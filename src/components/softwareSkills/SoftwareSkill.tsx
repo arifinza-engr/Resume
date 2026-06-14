@@ -12,7 +12,7 @@ export default function SoftwareSkill() {
               <li
                 key={i}
                 className="software-skill-inline"
-                name={skills.skillName}
+                data-name={skills.skillName}
               >
                 <i className={skills.fontAwesomeClassname}></i>
                 <p>{skills.skillName}</p>

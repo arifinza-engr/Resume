@@ -1,14 +1,25 @@
 import React from "react";
 import "./BlogCard.scss";
 
-export default function BlogCard({blog, isDark}) {
+interface Blog {
+  url: string;
+  title: string;
+  description: string;
+}
+
+interface BlogCardProps {
+  blog: Blog;
+  isDark: boolean;
+}
+
+export default function BlogCard({blog, isDark}: BlogCardProps) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
       return;
     }
     var win = window.open(url, "_blank");
-    win.focus();
+    win?.focus();
   }
 
   return (

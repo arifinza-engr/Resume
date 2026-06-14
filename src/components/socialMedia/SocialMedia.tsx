@@ -1,16 +1,25 @@
 import React from "react";
 import "./SocialMedia.scss";
-import {socialMediaLinks} from "../../portfolio";
+import {socialMediaLinks as _socialMediaLinks} from "../../portfolio";
+
+// Cast to permissive type — portfolio.ts only defines the used subset;
+// optional fields (gmail, gitlab, etc.) may not be present.
+const links = _socialMediaLinks as Record<string, string | boolean | undefined>;
+
+const str = (key: string): string | undefined => {
+  const v = links[key];
+  return typeof v === "string" ? v : undefined;
+};
 
 export default function socialMedia() {
-  if (!socialMediaLinks.display) {
+  if (!links["display"]) {
     return null;
   }
   return (
     <div className="social-media-div">
-      {socialMediaLinks.github ? (
+      {str("github") ? (
         <a
-          href={socialMediaLinks.github}
+          href={str("github")}
           className="icon-button github"
           target="_blank"
           rel="noopener noreferrer"
@@ -20,9 +29,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.linkedin ? (
+      {str("linkedin") ? (
         <a
-          href={socialMediaLinks.linkedin}
+          href={str("linkedin")}
           className="icon-button linkedin"
           target="_blank"
           rel="noopener noreferrer"
@@ -32,9 +41,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.gmail ? (
+      {str("gmail") ? (
         <a
-          href={`mailto:${socialMediaLinks.gmail}`}
+          href={`mailto:${str("gmail")}`}
           className="icon-button google"
           target="_blank"
           rel="noopener noreferrer"
@@ -44,9 +53,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.gitlab ? (
+      {str("gitlab") ? (
         <a
-          href={socialMediaLinks.gitlab}
+          href={str("gitlab")}
           className="icon-button gitlab"
           target="_blank"
           rel="noopener noreferrer"
@@ -56,9 +65,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.facebook ? (
+      {str("facebook") ? (
         <a
-          href={socialMediaLinks.facebook}
+          href={str("facebook")}
           className="icon-button facebook"
           target="_blank"
           rel="noopener noreferrer"
@@ -68,9 +77,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.instagram ? (
+      {str("instagram") ? (
         <a
-          href={socialMediaLinks.instagram}
+          href={str("instagram")}
           className="icon-button instagram"
           target="_blank"
           rel="noopener noreferrer"
@@ -80,9 +89,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.twitter ? (
+      {str("twitter") ? (
         <a
-          href={socialMediaLinks.twitter}
+          href={str("twitter")}
           className="icon-button twitter"
           target="_blank"
           rel="noopener noreferrer"
@@ -92,9 +101,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.medium ? (
+      {str("medium") ? (
         <a
-          href={socialMediaLinks.medium}
+          href={str("medium")}
           className="icon-button medium"
           target="_blank"
           rel="noopener noreferrer"
@@ -104,9 +113,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.stackoverflow ? (
+      {str("stackoverflow") ? (
         <a
-          href={socialMediaLinks.stackoverflow}
+          href={str("stackoverflow")}
           className="icon-button stack-overflow"
           target="_blank"
           rel="noopener noreferrer"
@@ -116,9 +125,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.kaggle ? (
+      {str("kaggle") ? (
         <a
-          href={socialMediaLinks.kaggle}
+          href={str("kaggle")}
           className="icon-button kaggle"
           target="_blank"
           rel="noopener noreferrer"
@@ -128,9 +137,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.whatsapp ? (
+      {str("whatsapp") ? (
         <a
-          href={socialMediaLinks.whatsapp}
+          href={str("whatsapp")}
           className="icon-button whatsapp"
           target="_blank"
           rel="noopener noreferrer"

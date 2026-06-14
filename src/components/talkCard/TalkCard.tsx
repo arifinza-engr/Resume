@@ -1,7 +1,19 @@
 import React from "react";
 import "./TalkCard.scss";
 
-export default function TalkCard({talkDetails}) {
+interface TalkDetails {
+  isDark?: boolean;
+  title: string;
+  subtitle: string;
+  slides_url?: string;
+  event_url?: string;
+}
+
+interface TalkCardProps {
+  talkDetails: TalkDetails;
+}
+
+export default function TalkCard({talkDetails}: TalkCardProps) {
   return (
     <div>
       <div className="container">

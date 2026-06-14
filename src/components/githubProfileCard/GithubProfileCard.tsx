@@ -5,7 +5,19 @@ import {contactInfo, isHireable} from "../../portfolio";
 import emoji from "react-easy-emoji";
 import {Fade} from "react-awesome-reveal";
 
-export default function GithubProfileCard({prof}) {
+interface GithubProfile {
+  bio?: string;
+  location?: string;
+  avatarUrl?: string;
+  name?: string;
+  hireable?: string;
+}
+
+interface GithubProfileCardProps {
+  prof: GithubProfile;
+}
+
+export default function GithubProfileCard({prof}: GithubProfileCardProps) {
   if (isHireable) {
     prof.hireable = "Yes";
   } else {

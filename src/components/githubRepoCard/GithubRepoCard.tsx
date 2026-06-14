@@ -3,14 +3,30 @@ import "./GithubRepoCard.scss";
 import {Fade} from "react-awesome-reveal";
 import {formatFileSizeDisplay} from "../../utils";
 
-export default function GithubRepoCard({repo, isDark}) {
+interface RepoNode {
+  id: string;
+  url: string;
+  name: string;
+  description?: string;
+  forkCount: number;
+  diskUsage?: number;
+  primaryLanguage?: {color: string; name: string} | null;
+  stargazers: {totalCount: number};
+}
+
+interface GithubRepoCardProps {
+  repo: {node: RepoNode};
+  isDark: boolean;
+}
+
+export default function GithubRepoCard({repo, isDark}: GithubRepoCardProps) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL in ${name} is undefined`);
       return;
     }
     var win = window.open(url, "_blank");
-    win.focus();
+    win?.focus();
   }
 
   return (
@@ -40,7 +56,7 @@ export default function GithubRepoCard({repo, isDark}) {
           <p className="repo-description">{repo.node.description}</p>
           <div className="repo-stats">
             <div className="repo-left-stat">
-              {repo.node.primaryLanguage !== null && (
+              {repo.node.primaryLanguage != null && (
                 <span>
                   <div
                     className="language-color"
@@ -85,7 +101,7 @@ export default function GithubRepoCard({repo, isDark}) {
               </span>
             </div>
             <div className="repo-right-stat">
-              <p>{formatFileSizeDisplay(repo.node.diskUsage)}</p>
+              <p>{formatFileSizeDisplay(repo.node.diskUsage ?? 0)}</p>
             </div>
           </div>
         </div>

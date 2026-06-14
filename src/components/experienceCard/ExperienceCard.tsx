@@ -2,18 +2,32 @@ import React, {useState, createRef} from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
-export default function ExperienceCard({cardInfo, isDark}) {
+interface ExperienceCardInfo {
+  company: string;
+  companylogo: string;
+  role: string;
+  date: string;
+  desc?: string;
+  descBullets?: string[];
+}
+
+interface ExperienceCardProps {
+  cardInfo: ExperienceCardInfo;
+  isDark: boolean;
+}
+
+export default function ExperienceCard({cardInfo, isDark}: ExperienceCardProps) {
   const [colorArrays, setColorArrays] = useState([]);
-  const imgRef = createRef();
+  const imgRef = createRef<HTMLImageElement>();
 
   function getColorArrays() {
     const colorThief = new ColorThief();
     setColorArrays(colorThief.getColor(imgRef.current));
   }
 
-  function rgb(values) {
+  function rgb(values: number[] | undefined): string | undefined {
     return typeof values === "undefined"
-      ? null
+      ? undefined
       : "rgb(" + values.join(", ") + ")";
   }
 
