@@ -1,4 +1,4 @@
-import {defineConfig} from "vite";
+import {defineConfig, transformWithEsbuild} from "vite";
 import react from "@vitejs/plugin-react";
 
 // outDir "build" dipertahankan agar `gh-pages -d build` tetap bekerja.
@@ -11,7 +11,6 @@ function jsxForDotJsPlugin() {
     name: "jsx-for-dot-js",
     async transform(code, id) {
       if (/src\/.*\.js$/.test(id) && !id.includes("node_modules")) {
-        const {transformWithEsbuild} = await import("vite");
         return transformWithEsbuild(code, id, {loader: "jsx"});
       }
     }
