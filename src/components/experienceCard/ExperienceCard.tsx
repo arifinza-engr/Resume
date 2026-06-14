@@ -16,7 +16,10 @@ interface ExperienceCardProps {
   isDark: boolean;
 }
 
-export default function ExperienceCard({cardInfo, isDark}: ExperienceCardProps) {
+export default function ExperienceCard({
+  cardInfo,
+  isDark
+}: ExperienceCardProps) {
   const [colorArrays, setColorArrays] = useState<number[] | null>(null);
   const imgRef = createRef<HTMLImageElement>();
 
@@ -31,7 +34,7 @@ export default function ExperienceCard({cardInfo, isDark}: ExperienceCardProps) 
 
   const GetDescBullets = ({
     descBullets,
-    isDark,
+    isDark
   }: {
     descBullets?: string[];
     isDark: boolean;

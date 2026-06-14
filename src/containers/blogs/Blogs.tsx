@@ -16,7 +16,9 @@ export default function Blogs() {
       ? html
           .split(/<\/p>/i)
           .map(part => part.split(/<p[^>]*>/i).pop())
-          .filter((el): el is string => typeof el === "string" && el.trim().length > 0)
+          .filter(
+            (el): el is string => typeof el === "string" && el.trim().length > 0
+          )
           .map(el => el.replace(/<\/?[^>]+(>|$)/g, "").trim())
           .join(" ")
       : "";

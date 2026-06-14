@@ -8,8 +8,8 @@ import Loading from "../../containers/loading/Loading";
 type RepoEdge = any;
 
 export default function Projects() {
-  const GithubRepoCard = lazy(() =>
-    import("../../components/githubRepoCard/GithubRepoCard")
+  const GithubRepoCard = lazy(
+    () => import("../../components/githubRepoCard/GithubRepoCard")
   );
   const FailedLoading = () => null;
   const renderLoader = () => <Loading />;

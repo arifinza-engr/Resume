@@ -11,7 +11,11 @@ interface ButtonProps {
 export default function Button({text, className, href, newTab}: ButtonProps) {
   return (
     <div className={className}>
-      <a className="main-button" href={href} target={newTab ? "_blank" : undefined}>
+      <a
+        className="main-button"
+        href={href}
+        target={newTab ? "_blank" : undefined}
+      >
         {text}
       </a>
     </div>
