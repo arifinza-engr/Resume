@@ -29,7 +29,6 @@ const greeting = {
   displayGreeting: true
 };
 
-
 // Social Media Links
 
 const socialMediaLinks = {
@@ -48,61 +47,67 @@ const skillsSection = {
   title: "What I do",
   subTitle: "DEDICATED IT SUPPORT SPECIALIST WHO ENSURES SYSTEMS RUN SMOOTHLY",
   skills: [
-    emoji("🛠️ Troubleshooting hardware and software issues across user devices"),
-    emoji("🖥️ Installing, configuring, and maintaining computer systems and networks"),
-    emoji("🔒 Ensuring system security through firewalls, updates, and access control"),
+    emoji(
+      "🛠️ Troubleshooting hardware and software issues across user devices"
+    ),
+    emoji(
+      "🖥️ Installing, configuring, and maintaining computer systems and networks"
+    ),
+    emoji(
+      "🔒 Ensuring system security through firewalls, updates, and access control"
+    ),
     emoji("📞 Providing technical support and training to end users"),
-    emoji("📋 Performing routine backups and system health checks"),
+    emoji("📋 Performing routine backups and system health checks")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
 
-softwareSkills: [
-  {
-    skillName: "Windows",
-    fontAwesomeClassname: "fab fa-windows"
-  },
-  {
-    skillName: "Linux",
-    fontAwesomeClassname: "fab fa-linux"
-  },
-  {
-    skillName: "Networking",
-    fontAwesomeClassname: "fas fa-network-wired"
-  },
-  {
-    skillName: "Mikrotik",
-    fontAwesomeClassname: "fas fa-server"
-  },
-  { skillName: "Web Development", fontAwesomeClassname: "fas fa-code" },
-  { skillName: "Excel Automation", fontAwesomeClassname: "fas fa-file-excel" },
-  { skillName: "RDBMS", fontAwesomeClassname: "fas fa-database" },
-  {
-    skillName: "Hardware Troubleshooting",
-    fontAwesomeClassname: "fas fa-tools"
-  },
-  {
-    skillName: "Remote Desktop",
-    fontAwesomeClassname: "fas fa-desktop"
-  },
-  {
-    skillName: "Office 365",
-    fontAwesomeClassname: "fas fa-envelope"
-  },
-  {
-    skillName: "Backup & Recovery",
-    fontAwesomeClassname: "fas fa-hdd"
-  },
-  {
-    skillName: "Firewall & Security",
-    fontAwesomeClassname: "fas fa-shield-alt"
-  },
-  {
-    skillName: "Virtualization",
-    fontAwesomeClassname: "fas fa-cloud"
-  }
-],
+  softwareSkills: [
+    {
+      skillName: "Windows",
+      fontAwesomeClassname: "fab fa-windows"
+    },
+    {
+      skillName: "Linux",
+      fontAwesomeClassname: "fab fa-linux"
+    },
+    {
+      skillName: "Networking",
+      fontAwesomeClassname: "fas fa-network-wired"
+    },
+    {
+      skillName: "Mikrotik",
+      fontAwesomeClassname: "fas fa-server"
+    },
+    {skillName: "Web Development", fontAwesomeClassname: "fas fa-code"},
+    {skillName: "Excel Automation", fontAwesomeClassname: "fas fa-file-excel"},
+    {skillName: "RDBMS", fontAwesomeClassname: "fas fa-database"},
+    {
+      skillName: "Hardware Troubleshooting",
+      fontAwesomeClassname: "fas fa-tools"
+    },
+    {
+      skillName: "Remote Desktop",
+      fontAwesomeClassname: "fas fa-desktop"
+    },
+    {
+      skillName: "Office 365",
+      fontAwesomeClassname: "fas fa-envelope"
+    },
+    {
+      skillName: "Backup & Recovery",
+      fontAwesomeClassname: "fas fa-hdd"
+    },
+    {
+      skillName: "Firewall & Security",
+      fontAwesomeClassname: "fas fa-shield-alt"
+    },
+    {
+      skillName: "Virtualization",
+      fontAwesomeClassname: "fas fa-cloud"
+    }
+  ],
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -163,7 +168,7 @@ const workExperiences = {
       role: "IT Support",
       company: "BPPP Tegal (Resvara)",
       companylogo: require("./assets/images/bpppLogo.png"), // Tambahkan logo jika ada
-      date: "Jul 2024 – Dec 2024",
+      date: "Jul 2024 – Jul 2025",
       desc: "Maintained VPS servers, developed automation tools using Excel, and supported digital services for public outreach.",
       descBullets: [
         "Built and maintained institutional website",
@@ -253,7 +258,8 @@ const achievementSection = {
   achievementsCards: [
     {
       title: "MikroTik Certified Network Associate (MTCNA)",
-      subtitle: "Official certification from MikroTik, obtained through ID-Networkers. Valid until June 2027.",
+      subtitle:
+        "Official certification from MikroTik, obtained through ID-Networkers. Valid until June 2027.",
       image: require("./assets/images/MTCNA.png"), // Ganti dengan logo sertifikat jika ada
       imageAlt: "MTCNA Logo",
       footerLink: [
@@ -265,7 +271,8 @@ const achievementSection = {
     },
     {
       title: "Linux Fundamentals",
-      subtitle: "Basic Linux system administration training covering file system management, user permissions, and package management.",
+      subtitle:
+        "Basic Linux system administration training covering file system management, user permissions, and package management.",
       image: require("./assets/images/linux.png"), // Ganti dengan logo sertifikat jika ada
       imageAlt: "Linux Logo",
       footerLink: [
