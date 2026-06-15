@@ -3,7 +3,7 @@ import {describe, it, expect, vi} from "vitest";
 
 // Mock heavy externals that don't work in jsdom (canvas/animation, external script)
 vi.mock("lottie-react", () => ({default: () => null}));
-vi.mock("react-twitter-embed", () => ({TwitterTimelineEmbed: () => null}));
+vi.mock("react-twitter-widgets", () => ({Timeline: () => null}));
 
 import App from "./App";
 

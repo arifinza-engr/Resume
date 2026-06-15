@@ -1,26 +1,11 @@
-// NOTE: react-twitter-embed is unmaintained and declares peer deps on React <=16.
-// It is forced onto React 19 via package.json "overrides" and renders fine, but
-// consider replacing with react-tweet or an official embed if issues arise.
 import {Suspense, useContext} from "react";
 import "./twitter.scss";
 import Loading from "../loading/Loading";
-import {TwitterTimelineEmbed} from "react-twitter-embed";
+import {Timeline} from "react-twitter-widgets";
 import {twitterDetails} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 const renderLoader = () => <Loading />;
-const cantDisplayError =
-  "<div className='centerContent'><h2>Can't load? Check privacy protection settings</h2></div>";
-
-function timeOut() {
-  setTimeout(function () {
-    const el = document.getElementById("twitter");
-    if (el && !el.innerHTML.includes("iframe")) {
-      el.innerHTML = cantDisplayError;
-    }
-  }, 10000);
-}
-const widthScreen = window.screen.width;
 
 export default function Twitter() {
   const {isDark} = useContext(StyleContext);
@@ -30,29 +15,33 @@ export default function Twitter() {
   }
   if (!twitterDetails.userName) {
     console.error("Twitter username for twitter section is missing");
-  }
-  if (twitterDetails.userName) {
-    return (
-      <Suspense fallback={renderLoader()}>
-        <div className="tw-main-div" id="twitter">
-          <div className="centerContent">
-            <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName={twitterDetails.userName}
-              options={{height: 400, width: {widthScreen}}}
-              placeholder={renderLoader()}
-              autoHeight={false}
-              borderColor="#fff"
-              key={isDark ? "1" : "2"}
-              theme={isDark ? "dark" : "light"}
-              noFooter={true}
-              onload={timeOut()}
-            />
-          </div>
-        </div>
-      </Suspense>
-    );
-  } else {
     return null;
   }
+
+  return (
+    <Suspense fallback={renderLoader()}>
+      <div className="tw-main-div" id="twitter">
+        <div className="centerContent">
+          {/* key forces a re-mount so the timeline re-themes on dark-mode toggle */}
+          <Timeline
+            key={isDark ? "dark" : "light"}
+            dataSource={{
+              sourceType: "profile",
+              screenName: twitterDetails.userName
+            }}
+            options={{
+              height: "400",
+              theme: isDark ? "dark" : "light",
+              chrome: "noheader nofooter"
+            }}
+            renderError={() => (
+              <div className="centerContent">
+                <h2>Can&apos;t load? Check privacy protection settings</h2>
+              </div>
+            )}
+          />
+        </div>
+      </div>
+    </Suspense>
+  );
 }
