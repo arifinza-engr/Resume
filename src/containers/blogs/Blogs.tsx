@@ -24,26 +24,37 @@ export default function Blogs() {
       : "";
   }
   useEffect(() => {
-    if (blogSection.displayMediumBlogs === "true") {
-      const getProfileData = () => {
+    // Only fetch Medium data when the section is shown AND Medium is enabled.
+    if (blogSection.display && blogSection.displayMediumBlogs === "true") {
+      const getMediumData = () => {
         fetch("/blogs.json")
           .then(result => {
-            if (result.ok) {
+            // A missing blogs.json is served as the index.html SPA fallback,
+            // so verify we actually got JSON before parsing it.
+            const contentType = result.headers.get("content-type") || "";
+            if (result.ok && contentType.includes("application/json")) {
               return result.json();
             }
+            return null;
           })
           .then(response => {
-            setMediumBlogsFunction(response.items);
+            if (response && Array.isArray(response.items)) {
+              setMediumBlogsFunction(response.items);
+            } else {
+              // No Medium data available — keep the default hardcoded blogs.
+              setMediumBlogsFunction("Error");
+              blogSection.displayMediumBlogs = "false";
+            }
           })
           .catch(function (error) {
             console.error(
-              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
+              `${error} (Blogs section reverted to default hardcoded posts)`
             );
             setMediumBlogsFunction("Error");
             blogSection.displayMediumBlogs = "false";
           });
       };
-      getProfileData();
+      getMediumData();
     }
   }, []);
   if (!blogSection.display) {
