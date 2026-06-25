@@ -6,8 +6,19 @@
   overflow: hidden;
 }
 
+.skills-main-div.skills-single {
+  display: block;
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .skills-text-div {
   margin-left: 50px;
+}
+
+.skills-single .skills-text-div {
+  margin-left: 0;
 }
 
 .skills-main-div > * {
@@ -15,9 +26,8 @@
   margin-bottom: 30px;
 }
 
-.skills-image-div > img {
-  max-width: 100%;
-  height: auto;
+.skills-single .software-skills-main-div {
+  justify-content: center;
 }
 
 .skills-heading {
@@ -28,8 +38,6 @@
 }
 
 /* Media Query */
-@media (max-width: 1380px) {
-}
 @media (max-width: 768px) {
   .skills-heading {
     text-align: center;
@@ -51,9 +59,5 @@
   .skills-text-subtitle {
     font-size: 16px;
     text-align: center;
-  }
-  .skills-image-div {
-    /* display: none; */
-    order: 2;
   }
 }
