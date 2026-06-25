@@ -19,7 +19,7 @@ export default function Projects() {
 
   useEffect(() => {
     const getRepoData = () => {
-      fetch("/profile.json")
+      fetch(import.meta.env.BASE_URL + "profile.json")
         .then(result => {
           if (result.ok) {
             return result.json();

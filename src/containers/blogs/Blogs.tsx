@@ -27,7 +27,7 @@ export default function Blogs() {
     // Only fetch Medium data when the section is shown AND Medium is enabled.
     if (blogSection.display && blogSection.displayMediumBlogs === "true") {
       const getMediumData = () => {
-        fetch("/blogs.json")
+        fetch(import.meta.env.BASE_URL + "blogs.json")
           .then(result => {
             // A missing blogs.json is served as the index.html SPA fallback,
             // so verify we actually got JSON before parsing it.
