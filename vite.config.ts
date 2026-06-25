@@ -2,7 +2,10 @@
 import {defineConfig} from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
+export default defineConfig(({command}) => ({
+  // GitHub Pages project site is served from /<repo>/. Only the production
+  // build needs that base path; dev/preview/test stay at "/".
+  base: command === "build" ? "/Resume/" : "/",
   plugins: [react()],
   build: {
     outDir: "build",
@@ -29,4 +32,4 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./src/setupTests.ts"
   }
-});
+}));
