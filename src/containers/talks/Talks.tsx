@@ -14,7 +14,7 @@ export default function Talks() {
     <Fade direction="up" duration={1000} triggerOnce>
       <div className="main" id="talks">
         <div className="talk-header">
-          <h1 className="talk-header-title">{talkSection.title}</h1>
+          <h2 className="talk-header-title">{talkSection.title}</h2>
           <p
             className={
               isDark

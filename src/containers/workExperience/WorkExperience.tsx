@@ -13,7 +13,7 @@ export default function WorkExperience() {
         <Fade direction="up" duration={1000} triggerOnce>
           <div className="experience-container" id="workExperience">
             <div>
-              <h1 className="experience-heading">Experiences</h1>
+              <h2 className="experience-heading">Experiences</h2>
               <div className="experience-cards-div">
                 {workExperiences.experience.map((card, i) => {
                   return (

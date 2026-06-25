@@ -1,2 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /
+
+# TODO: ganti dengan URL live kamu setelah deploy
+Sitemap: https://arifinza-engr.github.io/Resume/sitemap.xml

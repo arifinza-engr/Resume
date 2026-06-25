@@ -17,7 +17,7 @@ export default function Podcast() {
     <Fade direction="up" duration={1000} triggerOnce>
       <div className="main">
         <div className="podcast-header">
-          <h1 className="podcast-header-title">{podcastSection.title}</h1>
+          <h2 className="podcast-header-title">{podcastSection.title}</h2>
           <p
             className={
               isDark

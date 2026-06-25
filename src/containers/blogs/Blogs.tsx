@@ -64,7 +64,7 @@ export default function Blogs() {
     <Fade direction="up" duration={1000} triggerOnce>
       <div className="main" id="blogs">
         <div className="blog-header">
-          <h1 className="blog-header-text">{blogSection.title}</h1>
+          <h2 className="blog-header-text">{blogSection.title}</h2>
           <p
             className={
               isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"

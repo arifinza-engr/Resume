@@ -27,11 +27,11 @@ export default function Skills() {
         </Fade>
         <Fade direction="right" duration={1000} triggerOnce>
           <div className="skills-text-div">
-            <h1
+            <h2
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}
             >
               {skillsSection.title}{" "}
-            </h1>
+            </h2>
             <p
               className={
                 isDark

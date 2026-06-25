@@ -19,6 +19,7 @@ export default function socialMedia() {
       {str("github") ? (
         <a
           href={str("github")}
+          aria-label="GitHub"
           className="icon-button github"
           target="_blank"
           rel="noopener noreferrer"
@@ -31,6 +32,7 @@ export default function socialMedia() {
       {str("linkedin") ? (
         <a
           href={str("linkedin")}
+          aria-label="LinkedIn"
           className="icon-button linkedin"
           target="_blank"
           rel="noopener noreferrer"
@@ -43,6 +45,7 @@ export default function socialMedia() {
       {str("gmail") ? (
         <a
           href={`mailto:${str("gmail")}`}
+          aria-label="Email"
           className="icon-button google"
           target="_blank"
           rel="noopener noreferrer"
@@ -55,6 +58,7 @@ export default function socialMedia() {
       {str("gitlab") ? (
         <a
           href={str("gitlab")}
+          aria-label="GitLab"
           className="icon-button gitlab"
           target="_blank"
           rel="noopener noreferrer"
@@ -67,6 +71,7 @@ export default function socialMedia() {
       {str("facebook") ? (
         <a
           href={str("facebook")}
+          aria-label="Facebook"
           className="icon-button facebook"
           target="_blank"
           rel="noopener noreferrer"
@@ -79,6 +84,7 @@ export default function socialMedia() {
       {str("instagram") ? (
         <a
           href={str("instagram")}
+          aria-label="Instagram"
           className="icon-button instagram"
           target="_blank"
           rel="noopener noreferrer"
@@ -91,6 +97,7 @@ export default function socialMedia() {
       {str("twitter") ? (
         <a
           href={str("twitter")}
+          aria-label="Twitter"
           className="icon-button twitter"
           target="_blank"
           rel="noopener noreferrer"
@@ -103,6 +110,7 @@ export default function socialMedia() {
       {str("medium") ? (
         <a
           href={str("medium")}
+          aria-label="Medium"
           className="icon-button medium"
           target="_blank"
           rel="noopener noreferrer"
@@ -115,6 +123,7 @@ export default function socialMedia() {
       {str("stackoverflow") ? (
         <a
           href={str("stackoverflow")}
+          aria-label="Stack Overflow"
           className="icon-button stack-overflow"
           target="_blank"
           rel="noopener noreferrer"
@@ -127,6 +136,7 @@ export default function socialMedia() {
       {str("kaggle") ? (
         <a
           href={str("kaggle")}
+          aria-label="Kaggle"
           className="icon-button kaggle"
           target="_blank"
           rel="noopener noreferrer"
@@ -139,6 +149,7 @@ export default function socialMedia() {
       {str("whatsapp") ? (
         <a
           href={str("whatsapp")}
+          aria-label="WhatsApp"
           className="icon-button whatsapp"
           target="_blank"
           rel="noopener noreferrer"

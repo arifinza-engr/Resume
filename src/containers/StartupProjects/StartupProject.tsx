@@ -21,7 +21,7 @@ export default function StartupProject() {
     <Fade direction="up" duration={1000} triggerOnce>
       <div className="main" id="projects">
         <div>
-          <h1 className="skills-heading">{bigProjects.title}</h1>
+          <h2 className="skills-heading">{bigProjects.title}</h2>
           <p
             className={
               isDark

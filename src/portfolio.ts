@@ -8,8 +8,6 @@ import udinusLogo from "./assets/images/udinusLogo.png";
 import bpppLogo from "./assets/images/bpppLogo.png";
 import pemalangLogo from "./assets/images/pemalangLogo.png";
 import smpLogo from "./assets/images/smpLogo.png";
-import saayaHealthLogo from "./assets/images/saayaHealthLogo.webp";
-import nextuLogo from "./assets/images/nextuLogo.webp";
 import mtcnaLogo from "./assets/images/MTCNA.png";
 import linuxLogo from "./assets/images/linux.png";
 
@@ -18,7 +16,7 @@ import linuxLogo from "./assets/images/linux.png";
 const splashScreen = {
   enabled: true, // set false to disable splash screen
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 1000 // Set animation duration as per your animation
 };
 
 // Summary And Greeting Section
@@ -33,7 +31,7 @@ const greeting = {
   subTitle: emoji(
     "A passionate IT Support Specialist ⚙️ with experience in server maintenance, network setup, hardware/software troubleshooting, automation, and web development. Dedicated to delivering efficient tech solutions."
   ),
-  resumeLink: "",
+  resumeLink: "true", // truthy = show the "Download my resume" button (serves src/containers/greeting/resume.pdf)
   displayGreeting: true
 };
 
@@ -228,32 +226,13 @@ const openSource = {
 const bigProjects = {
   title: "Big Projects",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
-  projects: [
-    {
-      image: saayaHealthLogo,
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
-    },
-    {
-      image: nextuLogo,
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
-  ],
-  display: false // Set false to hide this section, defaults to tru
+  projects: [] as Array<{
+    image: string;
+    projectName: string;
+    projectDesc: string;
+    footerLink: Array<{name: string; url: string}>;
+  }>, // TODO: tambahkan proyek besar kamu, lalu set display: true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -301,20 +280,7 @@ const blogSection = {
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
   displayMediumBlogs: "false", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
+  blogs: [] as Array<{url: string; title: string; description: string}>, // TODO: tambahkan blog kamu, lalu set display: true
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -326,14 +292,12 @@ const talkSection = {
     "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
   ),
 
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
+  talks: [] as Array<{
+    title: string;
+    subtitle: string;
+    slides_url: string;
+    event_url: string;
+  }>, // TODO: tambahkan talk kamu, lalu set display: true
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -344,9 +308,7 @@ const podcastSection = {
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
   // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
+  podcast: [], // TODO: tambahkan podcast kamu, lalu set display: true
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -356,21 +318,21 @@ const resumeSection = {
   subtitle: "Feel free to download my resume",
 
   // Please Provide with Your Podcast embeded Link
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  number: "+62-895-377-897-675",
+  email_address: "arifinzaeskanugraha09.9b@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
+  userName: "", //Replace with your twitter username without @
   display: false // Set true to display this section, defaults to false
 };
 

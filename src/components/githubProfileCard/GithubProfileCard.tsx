@@ -26,7 +26,7 @@ export default function GithubProfileCard({prof}: GithubProfileCardProps) {
   return (
     <Fade direction="up" duration={1000} triggerOnce>
       <div className="main" id="contact">
-        <h1 className="prof-title">Reach Out to me!</h1>
+        <h2 className="prof-title">Reach Out to me!</h2>
         <div className="row">
           <div className="main-content-profile">
             <div className="blog-header">
