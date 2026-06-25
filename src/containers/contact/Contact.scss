@@ -11,63 +11,55 @@
   color: $textColorDark;
 }
 
-.contact-div-main > * {
-  flex: 1;
-}
-
 .contact-title {
   @include section-heading;
+  text-align: center;
+}
+
+.contact-subtitle {
+  text-transform: uppercase;
+  max-width: 36rem;
+  margin: 0.5rem auto 0;
+}
+
+.contact-text-div {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
 }
 
 .contact-detail,
 .contact-detail-email {
-  margin-top: 20px;
-  font-size: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  font-size: clamp(1rem, 3.4vw, 1.6rem);
   font-weight: 400;
   font-family: $mono;
-  color: $subTitle;
   text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-detail i,
+.contact-detail-email i {
+  color: $buttonColor;
+  flex: none;
 }
 
 .contact-detail:hover,
 .contact-detail-email:hover {
   color: $buttonColor;
-  text-shadow: none;
   transition: all 0.3s;
 }
 
-.contact-subtitle {
-  text-transform: uppercase;
-}
-
-.contact-text-div {
-  margin-top: 1.5rem;
+.contact-text-div .social-media-div {
+  margin-top: 0.5rem;
 }
 
 .contact-margin-top {
   margin-top: 4rem;
-}
-
-/* Media Query */
-@media (max-width: 1380px), (max-width: 768px) {
-  .contact-title {
-    text-align: center;
-  }
-
-  .contact-subtitle {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
-
-  .contact-text-div {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-
-  .contact-detail,
-  .contact-detail-email {
-    font-size: 20px;
-  }
-
 }

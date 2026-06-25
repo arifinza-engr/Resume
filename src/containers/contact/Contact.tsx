@@ -1,7 +1,7 @@
 import {useContext} from "react";
 import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import {contactInfo} from "../../portfolio";
+import {contactInfo, socialMediaLinks} from "../../portfolio";
 import {Fade} from "react-awesome-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -27,26 +27,26 @@ export default function Contact() {
                 isDark ? "dark-mode contact-text-div" : "contact-text-div"
               }
             >
-              {contactInfo.number && (
-                <>
-                  <a
-                    className="contact-detail"
-                    href={"tel:" + contactInfo.number}
-                  >
-                    {contactInfo.number}
-                  </a>
-                  <br />
-                  <br />
-                </>
+              {contactInfo.email_address && (
+                <a
+                  className="contact-detail-email"
+                  href={"mailto:" + contactInfo.email_address}
+                >
+                  <i className="fas fa-envelope"></i>
+                  <span>{contactInfo.email_address}</span>
+                </a>
               )}
-              <a
-                className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
-              >
-                {contactInfo.email_address}
-              </a>
-              <br />
-              <br />
+              {socialMediaLinks.whatsapp && contactInfo.number && (
+                <a
+                  className="contact-detail"
+                  href={socialMediaLinks.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-whatsapp"></i>
+                  <span>{contactInfo.number}</span>
+                </a>
+              )}
               <SocialMedia />
             </div>
           </div>
