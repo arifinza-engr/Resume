@@ -1,127 +1,102 @@
 @import "../../_globalColor";
 
-.main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 4rem;
-}
 .greet-main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.greeting-main {
+.hero {
+  text-align: center;
+  padding: 90px 24px 50px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    radial-gradient(
+      900px 500px at 50% -5%,
+      rgba(56, 189, 248, 0.1),
+      transparent 60%
+    );
+  background-size:
+    38px 38px,
+    38px 38px,
+    100% 100%;
 }
 
-.subTitle {
+.prompt {
+  font-family: $mono;
+  color: $buttonColor;
+  font-size: 1rem;
+  margin-bottom: 26px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.06);
+}
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: $buttonColor;
+  vertical-align: -2px;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-name {
+  font-size: clamp(2.2rem, 7vw, 4.4rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.02;
+  margin: 0 0 18px;
+}
+.hero-role {
+  font-family: $mono;
+  font-size: clamp(0.95rem, 2.4vw, 1.25rem);
+  margin-bottom: 24px;
+  b {
+    color: $buttonColor;
+    font-weight: 500;
+  }
+}
+.hero-sub {
   color: $subTitle !important;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 38rem;
+  margin: 0 auto 34px;
 }
-
-.greeting-main {
+.hero-cta {
   display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
 }
-
-.greeting-main > * {
-  flex: 1;
-  margin-bottom: 30px;
-}
-
-.empty-div {
-  margin-bottom: 40px;
-}
-
-.button-greeting-div {
-  display: flex;
-  margin-top: 40px;
+// the shared Button sets margin-right:50px; cancel it in the centered hero
+.hero-cta .main-button {
+  margin-right: 0;
 }
 .download-link-button {
   text-decoration: none;
 }
-
-.greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
-  color: $textColor !important;
+// center the social icons row
+.hero .social-media-div {
+  justify-content: center;
 }
 
-.greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
-}
-
-.greeting-image-div > img {
-  max-width: 100%;
-  height: auto;
-}
-
-.wave-emoji {
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
-  display: inline-block;
-  transform-origin: 70% 70%;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-/* Media Query */
-@media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
-  .greeting-text-p {
-    font-size: 20px;
-  }
-}
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
+  .hero {
+    padding: 60px 16px 40px;
   }
-  .greeting-text {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
-  .greeting-main {
-    display: block;
-  }
-  .greeting-image-div {
-    height: 256px;
-  }
-}
-
-@media (max-width: 320px) {
-  .main {
-    width: auto;
+  .hero-sub {
+    font-size: 1rem;
   }
 }

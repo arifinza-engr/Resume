@@ -1,68 +1,38 @@
-import {useContext} from "react";
-import {Fade} from "react-awesome-reveal";
-import emoji from "react-easy-emoji";
 import "./Greeting.scss";
-import landingPerson from "../../assets/lottie/landingPerson.json";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
+import {greeting} from "../../portfolio";
 import resumePdf from "./resume.pdf";
-import manOnTable from "../../assets/images/manOnTable.svg";
 
 export default function Greeting() {
-  const {isDark} = useContext(StyleContext);
   if (!greeting.displayGreeting) {
     return null;
   }
   return (
-    <Fade direction="up" duration={1000} triggerOnce>
-      <div className="greet-main" id="greeting">
-        <div className="greeting-main">
-          <div className="greeting-text-div">
-            <div>
-              <h1
-                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              >
-                {" "}
-                {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
-              </h1>
-              <p
-                className={
-                  isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
-                }
-              >
-                {greeting.subTitle}
-              </p>
-              <div id="resume" className="empty-div"></div>
-              <SocialMedia />
-              <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
-                  <a
-                    href={resumePdf}
-                    download="Resume.pdf"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
-            ) : (
-              <img alt="man sitting on table" src={manOnTable}></img>
-            )}
-          </div>
+    <div className="greet-main" id="greeting">
+      <div className="hero">
+        <div className="prompt">
+          ~/finza $ whoami<span className="cursor"></span>
         </div>
+        <h1 className="hero-name">{greeting.username}</h1>
+        <div className="hero-role">
+          &gt; <b>IT Support Specialist</b> · server · network · automation
+        </div>
+        <p className="hero-sub">{greeting.subTitle}</p>
+        <div className="hero-cta">
+          <Button text="Contact me" href="#contact" />
+          {greeting.resumeLink && (
+            <a
+              href={resumePdf}
+              download="Resume.pdf"
+              className="download-link-button"
+            >
+              <Button text="Download résumé" />
+            </a>
+          )}
+        </div>
+        <SocialMedia />
       </div>
-    </Fade>
+    </div>
   );
 }
