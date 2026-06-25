@@ -2,7 +2,7 @@
 
 .profile-image {
   border-radius: 50%;
-  border: 0.5rem solid $githubProfileCardBorder;
+  border: 2px solid rgba(56, 189, 248, 0.5);
   margin-left: auto;
   width: 100%;
   max-width: 350px;
@@ -22,6 +22,12 @@
 
 .location-div {
   text-shadow: $githubProfileCardLocationTS;
+}
+
+.location-div .desc-prof,
+.opp-div .desc-prof {
+  font-family: $mono;
+  color: $subTitle;
 }
 
 .opp-div {
