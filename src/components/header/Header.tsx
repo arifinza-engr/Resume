@@ -1,7 +1,6 @@
 import {useContext} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
-import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
@@ -78,11 +77,6 @@ function Header() {
           )}
           <li>
             <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            <a>
-              <ToggleSwitch />
-            </a>
           </li>
         </ul>
       </header>

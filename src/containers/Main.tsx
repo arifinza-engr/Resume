@@ -18,11 +18,11 @@ import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
-import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 const Main = () => {
-  const [isDark, setIsDark] = useLocalStorage("isDark", true);
+  // Dark-only: this is a dark-tech portfolio; no light theme / toggle.
+  const isDark = true;
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
@@ -38,13 +38,9 @@ const Main = () => {
     }
   }, []);
 
-  const changeTheme = () => {
-    setIsDark(!isDark);
-  };
-
   return (
-    <div className={isDark ? "dark-mode" : undefined}>
-      <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
+    <div className="dark-mode">
+      <StyleProvider value={{isDark: isDark, changeTheme: () => {}}}>
         {isShowingSplashAnimation && splashScreen.enabled ? (
           <SplashScreen />
         ) : (
