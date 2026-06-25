@@ -58,7 +58,9 @@
 }
 .certificate-card-footer span.certificate-tag {
   background: $buttonColor;
-  color: $lightBackground3;
+  // !important to beat the global `.dark-mode { color:#fff !important }`
+  // (same pattern the buttons use) so the tag has readable dark-on-accent text.
+  color: $onAccentText !important;
   vertical-align: middle;
   align-items: center;
   border-radius: 4px;

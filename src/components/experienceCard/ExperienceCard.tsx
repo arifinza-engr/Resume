@@ -42,7 +42,7 @@ export default function ExperienceCard({
       <div className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
-          <h5 className="experience-text-company">{cardInfo.company}</h5>
+          <h3 className="experience-text-company">{cardInfo.company}</h3>
         </div>
 
         <img
@@ -52,7 +52,7 @@ export default function ExperienceCard({
         />
       </div>
       <div className="experience-text-details">
-        <h5
+        <h4
           className={
             isDark
               ? "experience-text-role dark-mode-text"
@@ -60,7 +60,7 @@ export default function ExperienceCard({
           }
         >
           {cardInfo.role}
-        </h5>
+        </h4>
         <h5
           className={
             isDark
