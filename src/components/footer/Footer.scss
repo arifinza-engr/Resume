@@ -11,5 +11,13 @@
 
 .footer-div {
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1.5rem;
+}
+
+/* On narrow screens the footer text wraps toward the bottom-right where the
+   fixed scroll-to-top button sits; reserve space so they don't overlap. */
+@media (max-width: 768px) {
+  .footer-div {
+    padding-bottom: 5.5rem;
+  }
 }
