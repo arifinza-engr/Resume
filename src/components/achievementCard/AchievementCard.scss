@@ -31,11 +31,7 @@
 .certificate-detail-div {
   text-align: center;
 }
-.certificate-card:hover {
-  transform: translateY(-4px);
-  border-color: $buttonColor;
-  box-shadow: 0 12px 30px -12px rgba(56, 189, 248, 0.35);
-}
+.certificate-card:hover,
 .dark-mode.certificate-card:hover {
   transform: translateY(-4px);
   border-color: $buttonColor;
