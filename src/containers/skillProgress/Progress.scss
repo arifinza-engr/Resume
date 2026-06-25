@@ -20,7 +20,14 @@
   overflow: hidden;
 }
 .skill {
-  line-height: 3.5vw;
+  margin-bottom: 1.2rem;
+}
+// Normal line-height + a small gap so multi-line stack labels (e.g. wrapped on
+// mobile) don't crowd each other or the bar. Replaces the old `line-height:3.5vw`
+// which collapsed wrapped labels on small screens.
+.skill > p {
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
 }
 .skill-bars {
   font-size: 28px;

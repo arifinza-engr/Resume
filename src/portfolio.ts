@@ -154,7 +154,7 @@ const techStack = {
       progressPercentage: "80%"
     },
     {
-      Stack: "Database (MySQL)",
+      Stack: "Database (MySQL, PostgreSQL)",
       progressPercentage: "75%"
     },
     {
@@ -317,8 +317,9 @@ const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
 
-  // Please Provide with Your Podcast embeded Link
-  display: true // Set false to hide this section, defaults to true
+  // No dedicated Resume section/page — hide the header nav link. The hero's
+  // "Download résumé" button (greeting.resumeLink) still provides the download.
+  display: false // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
