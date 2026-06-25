@@ -180,3 +180,18 @@
     font-size: 12px;
   }
 }
+
+/* Mobile: keep the monospace logo on one line next to the hamburger.
+   The full name in monospace is wide, so scale it down and prevent wrap. */
+@media (max-width: 767px) {
+  .header .logo {
+    margin-top: 0;
+    font-size: 1em;
+    line-height: 58px;
+  }
+  .header .logo-name {
+    white-space: nowrap;
+    font-size: clamp(0.75rem, 3.8vw, 1rem);
+    padding: 0 6px;
+  }
+}

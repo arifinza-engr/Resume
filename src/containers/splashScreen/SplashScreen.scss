@@ -1,3 +1,5 @@
+@import "../../_globalColor";
+
 .splash-container {
   display: flex;
   flex-direction: column;
@@ -11,13 +13,16 @@
 }
 
 .splash-title-container {
-  font-size: 2.5rem;
+  font-size: clamp(1.1rem, 5vw, 2.5rem);
   text-decoration: none;
+  text-align: center;
+  max-width: 100%;
+  padding: 0 16px;
 }
 .splash-title {
-  font-family: "Agustina Regular", cursive;
+  font-family: $mono;
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
-  padding: 0 20px;
+  padding: 0 8px;
 }
