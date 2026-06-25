@@ -23,7 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 #user generated content
-public/profile.json
+# profile.json is committed so the GitHub Pages build (which doesn't run the
+# token-gated fetch) ships the pinned-repo data. Refresh via `npm start` then commit.
 public/blogs.json
 
 # vite
