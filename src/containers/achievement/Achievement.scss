@@ -1,8 +1,7 @@
 @import "../../_globalColor";
 
 .achievement-heading {
-  font-size: 56px;
-  font-weight: 400;
+  @include section-heading;
   line-height: normal;
   margin: 0px;
 }
@@ -16,14 +15,8 @@
 }
 
 /* Media Query */
-@media (max-width: 1380px) {
-  .achievement-heading {
-    font-size: 40px;
-  }
-}
 @media (max-width: 768px) {
   .achievement-heading {
-    font-size: 30px;
     text-align: center;
   }
   .achievement-subtitle {

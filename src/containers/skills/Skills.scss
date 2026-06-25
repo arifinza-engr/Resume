@@ -21,8 +21,7 @@
 }
 
 .skills-heading {
-  font-size: 56px;
-  font-weight: 400;
+  @include section-heading;
 }
 .subTitle {
   color: $subTitle;
@@ -30,13 +29,9 @@
 
 /* Media Query */
 @media (max-width: 1380px) {
-  .skills-heading {
-    font-size: 40px;
-  }
 }
 @media (max-width: 768px) {
   .skills-heading {
-    font-size: 30px;
     text-align: center;
   }
   .greeting-text-p {

@@ -89,3 +89,19 @@ $medium: #000;
 $stackoverflow: #f48024;
 $instagram: #c13584;
 $kaggle: #20beff;
+
+// ---- typography ----
+$mono: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, "Liberation Mono",
+  monospace;
+
+// Shared "code-comment" style for every section heading.
+@mixin section-heading {
+  font-family: $mono;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  letter-spacing: -0.5px;
+  &::before {
+    content: "// ";
+    color: $skillsColor;
+  }
+}

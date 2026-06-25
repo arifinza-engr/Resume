@@ -61,8 +61,7 @@
 }
 
 .header .logo-name {
-  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas,
-    "Liberation Mono", monospace;
+  font-family: $mono;
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;

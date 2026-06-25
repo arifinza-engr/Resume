@@ -1,8 +1,7 @@
 @import "../../_globalColor";
 
 .podcast-header-title {
-  font-size: 56px;
-  font-weight: 400;
+  @include section-heading;
   line-height: 0px;
 }
 
@@ -21,7 +20,6 @@
 
 @media (max-width: 768px) {
   .podcast-header-title {
-    font-size: 30px;
     text-align: center;
   }
   .podcast-header-subtitle {

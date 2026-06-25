@@ -17,8 +17,7 @@
 
 .prof-title {
   margin: 0;
-  font-size: 40px;
-  font-weight: 400;
+  @include section-heading;
 }
 
 .location-div {
@@ -99,7 +98,6 @@
 
   .prof-title {
     padding-bottom: 1rem;
-    font-size: 32px;
     text-align: center;
   }
 }

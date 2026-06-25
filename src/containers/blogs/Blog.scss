@@ -18,8 +18,7 @@
 }
 
 .blog-header-text {
-  font-size: 56px;
-  font-weight: 400;
+  @include section-heading;
 }
 
 .blog-subtitle {
@@ -46,14 +45,8 @@
 }
 
 /* Media Query */
-@media (max-width: 1380px) {
-  .blog-header-text {
-    font-size: 40px;
-  }
-}
 @media (max-width: 768px) {
   .blog-header-text {
-    font-size: 30px;
     text-align: center;
   }
   .blog-subtitle {

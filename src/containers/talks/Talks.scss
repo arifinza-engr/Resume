@@ -1,8 +1,7 @@
 @import "../../_globalColor";
 
 .talk-header-title {
-  font-size: 56px;
-  font-weight: 400;
+  @include section-heading;
   line-height: 0px;
 }
 
@@ -18,7 +17,6 @@
 
 @media (max-width: 768px) {
   .talk-header-title {
-    font-size: 30px;
     text-align: center;
   }
   .talk-header-subtitle {
