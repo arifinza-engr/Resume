@@ -1,8 +1,13 @@
 @import "../_globalColor";
 
+// Global dark theme. `color` is !important so text reads light over the dark
+// background even on components that hardcode a light-theme (dark) text color.
+// Elements with an accent-colored background (buttons, certificate tags) opt
+// out with their own `color: $onAccentText !important`. (This rule used to
+// live, surprisingly, in Footer.scss — it belongs here in the global sheet.)
 .dark-mode {
   background-color: $darkBackground;
-  color: white;
+  color: $textColorDark !important;
   transition: "0.1s";
 }
 
