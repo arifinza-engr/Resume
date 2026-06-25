@@ -3,6 +3,7 @@
 .profile-image {
   border-radius: 50%;
   border: 2px solid rgba(56, 189, 248, 0.5);
+  box-sizing: border-box;
   margin-left: auto;
   width: 100%;
   max-width: 350px;
