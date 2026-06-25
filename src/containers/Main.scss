@@ -5,3 +5,13 @@
   color: white;
   transition: "0.1s";
 }
+
+// Shared width for content sections (skills, open source, achievements,
+// contact, ...). Keeps every section's left edge aligned. Lived in
+// Greeting.scss before the hero rewrite; centralized here.
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}

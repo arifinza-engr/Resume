@@ -3,6 +3,7 @@
 .education-card {
   display: flex;
   flex-direction: row;
+  padding: 1.5rem;
   border: 1px solid rgba(56, 189, 248, 0.18);
   border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -93,7 +94,6 @@
 @media (max-width: 1380px) {
   .education-card {
     flex-direction: column;
-    padding-bottom: 10px;
   }
   .education-card-right {
     max-width: 90%;
