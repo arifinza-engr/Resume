@@ -171,17 +171,6 @@ const workExperiences = {
   display: true,
   experience: [
     {
-      role: "Frontend Developer (Contract)",
-      company: "MLEEMTF",
-      date: "Feb 2026 – Present",
-      desc: "Building the interface for an enterprise-grade, production LMS that serves government-institution training programs — covering learning modules, assessments, and training management.",
-      descBullets: [
-        "Translated complex module requirements (time-based assessment scheduling, multi-stage grading flows, new learning-activity types) into stable, review-passing features",
-        "Identified a critical backend security gap during integration — a potential privilege escalation in the registration flow — and escalated it to be fixed before production",
-        "Helped set up automated build & deployment pipelines to keep releases consistent and reduce manual deploy errors"
-      ]
-    },
-    {
       role: "IT Support",
       company: "BPPP Tegal (Resvara)",
       companylogo: bpppLogo,
