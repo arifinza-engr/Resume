@@ -2,7 +2,7 @@ import "./ExperienceCard.scss";
 
 interface ExperienceCardInfo {
   company: string;
-  companylogo: string;
+  companylogo?: string;
   role: string;
   date: string;
   desc?: string;
@@ -45,11 +45,13 @@ export default function ExperienceCard({
           <h3 className="experience-text-company">{cardInfo.company}</h3>
         </div>
 
-        <img
-          className="experience-roundedimg"
-          src={cardInfo.companylogo}
-          alt={cardInfo.company}
-        />
+        {cardInfo.companylogo && (
+          <img
+            className="experience-roundedimg"
+            src={cardInfo.companylogo}
+            alt={cardInfo.company}
+          />
+        )}
       </div>
       <div className="experience-text-details">
         <h4
