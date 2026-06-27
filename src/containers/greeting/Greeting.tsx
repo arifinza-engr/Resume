@@ -24,7 +24,7 @@ export default function Greeting() {
           {greeting.resumeLink && (
             <a
               href={resumePdf}
-              download="Resume.pdf"
+              download="CV_Arifinza Eska Nugraha.pdf"
               className="download-link-button"
             >
               <Button text="Download résumé" />
