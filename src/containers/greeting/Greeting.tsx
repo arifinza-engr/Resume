@@ -22,13 +22,12 @@ export default function Greeting() {
         <div className="hero-cta">
           <Button text="Contact me" href="#contact" />
           {greeting.resumeLink && (
-            <a
+            <Button
+              text="Download résumé"
               href={resumePdf}
               download="CV_Arifinza Eska Nugraha.pdf"
               className="download-link-button"
-            >
-              <Button text="Download résumé" />
-            </a>
+            />
           )}
         </div>
         <SocialMedia />
